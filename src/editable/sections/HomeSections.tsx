@@ -4,7 +4,7 @@ import type { SitePost } from '@/lib/site-connector'
 import type { HomeTimeSection } from '@/lib/task-data'
 import type { TaskKey } from '@/lib/site-config'
 import { pagesContent } from '@/editable/content/pages.content'
-import { CompactIndexCard, EditorialFeatureCard, RailPostCard, getEditableExcerpt, getEditablePostImage, postHref } from '@/editable/cards/PostCards'
+import { CompactIndexCard, EditorialFeatureCard, RailPostCard, getEditablePostImage, postHref } from '@/editable/cards/PostCards'
 
 type HomeSectionProps = {
   primaryTask: TaskKey
@@ -23,7 +23,7 @@ function HeroSpotlight({ posts }: { posts: SitePost[] }) {
   )
 }
 
-export function EditableHomeHero({ primaryTask, primaryRoute, posts }: HomeSectionProps) {
+export function EditableHomeHero({ primaryRoute, posts }: HomeSectionProps) {
   return (
     <section className="bg-[#4b1826] text-white">
       <div className="mx-auto grid max-w-[1480px] gap-10 px-4 py-12 sm:px-6 lg:grid-cols-[0.95fr_1.05fr] lg:px-10 lg:py-16">
@@ -122,7 +122,7 @@ export function EditableStoryRail({ primaryTask, primaryRoute, posts }: HomeSect
   )
 }
 
-export function EditableMagazineSplit({ primaryTask, primaryRoute, posts, timeSections }: HomeSectionProps) {
+export function EditableMagazineSplit({ posts, timeSections }: HomeSectionProps) {
   const curated = timeSections.flatMap((section) => section.posts).length ? timeSections.flatMap((section) => section.posts) : posts
   return (
     <section className="bg-[#f4f4ec]">

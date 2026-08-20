@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { ArrowRight, Clock3 } from 'lucide-react'
 import type { SitePost } from '@/lib/site-connector'
 import type { TaskKey } from '@/lib/site-config'
-import { editableDesignContract as dc, editablePalette as pal } from '@/editable/layouts/design-contract'
+import { editableDesignContract as dc } from '@/editable/layouts/design-contract'
 
 export function getEditablePostImage(post?: SitePost | null) {
   const media = Array.isArray(post?.media) ? post.media : []

@@ -35,7 +35,7 @@ export function EditableNavbar() {
       <header style={navVars} className="sticky top-0 z-50 border-b border-[var(--editable-nav-border)] bg-[var(--editable-nav-bg)] text-[var(--editable-nav-text)]">
         <nav className="mx-auto flex min-h-[84px] w-full max-w-[1480px] items-center gap-4 px-4 sm:px-6 lg:px-10">
           <Link href="/" className="flex shrink-0 items-center gap-3">
-            <Image src="/favico.png" alt={`${SITE_CONFIG.name} logo`} width={220} height={60} className="h-11 w-auto object-contain" priority />
+            <Image src="/favicon.png" alt={`${SITE_CONFIG.name} logo`} width={220} height={60} className="h-11 w-auto object-contain" priority />
             <span className="text-2xl font-black tracking-[-0.05em] text-white">{SITE_CONFIG.name}</span>
           </Link>
 
