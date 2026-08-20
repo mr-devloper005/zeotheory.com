@@ -2,14 +2,12 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
-import { ArrowUpRight } from 'lucide-react'
 import { SITE_CONFIG } from '@/lib/site-config'
 import { globalContent } from '@/editable/content/global.content'
 import { useEditableLocalAuthSession } from '@/editable/components/EditableLocalAuthForms'
 
 export function EditableFooter() {
   const year = new Date().getFullYear()
-  const taskLinks = SITE_CONFIG.tasks.filter((task) => task.enabled)
   const { session, logout } = useEditableLocalAuthSession()
 
   return (
@@ -18,7 +16,7 @@ export function EditableFooter() {
         <div className="grid gap-10 border-t border-white/10 pt-10 lg:grid-cols-[1.25fr_0.8fr_0.8fr]">
           <div>
             <Link href="/" className="inline-flex items-center gap-3">
-              <Image src="/favico.png" alt={`${SITE_CONFIG.name} logo`} width={240} height={64} className="h-12 w-auto object-contain" />
+              <Image src="/favicon.png" alt={`${SITE_CONFIG.name} logo`} width={240} height={64} className="h-12 w-auto object-contain" />
               <span className="text-3xl font-black tracking-[-0.05em] text-white">{SITE_CONFIG.name}</span>
             </Link>
             <h2 className="mt-5 max-w-xl text-5xl font-black tracking-[-0.06em]">A creative surface for image-first stories and premium discovery.</h2>
